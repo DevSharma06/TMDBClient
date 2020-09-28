@@ -9,8 +9,8 @@ import com.example.tmdbclient.domain.repository.MovieRepository
 
 class MovieRepositoryImpl(
     private val movieRemoteDataSource: MovieRemoteDataSource,
-    private val movieCacheDataSource: MovieCacheDataSource,
-    private val movieLocalDataSource: MovieLocalDataSource
+    private val movieLocalDataSource: MovieLocalDataSource,
+    private val movieCacheDataSource: MovieCacheDataSource
 ) : MovieRepository {
     override suspend fun getMovies(): List<Movie>? {
         return getMoviesFromCache()

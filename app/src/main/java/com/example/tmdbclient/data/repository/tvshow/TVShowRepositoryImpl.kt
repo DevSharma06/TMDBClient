@@ -13,8 +13,8 @@ import com.example.tmdbclient.domain.repository.TVShowRepository
 
 class TVShowRepositoryImpl(
     private val tvShowRemoteDataSource: TVShowRemoteDataSource,
-    private val tvShowCacheDataSource: TVShowCacheDataSource,
-    private val tvShowLocalDataSource: TVShowLocalDataSource
+    private val tvShowLocalDataSource: TVShowLocalDataSource,
+    private val tvShowCacheDataSource: TVShowCacheDataSource
 ) : TVShowRepository {
     override suspend fun getTVShows(): List<TVShow>? {
         return getTVShowsFromCache()
